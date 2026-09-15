@@ -1,0 +1,25 @@
+=== Distance Distributions (cosine distance = 1 - cosine similarity) ===
+Genuine (same person):
+  n=1646 mean=0.301 std=0.199 p05=0.055 p50=0.262 p95=0.704
+Impostor (different persons):
+  n=2725 mean=1.044 std=0.089 p05=0.903 p50=1.061 p95=1.161
+
+=== Threshold Sweep ===
+thr=0.10 FAR= 0.00% FRR=84.08%
+thr=0.21 FAR= 0.00% FRR=66.59%
+thr=0.32 FAR= 0.00% FRR=34.81%
+thr=0.43 FAR= 0.00% FRR=18.41%
+thr=0.54 FAR= 0.00% FRR=13.73%
+thr=0.65 FAR= 0.00% FRR= 6.87%
+thr=0.76 FAR= 0.18% FRR= 3.89%
+thr=0.87 FAR= 2.61% FRR= 1.46%
+thr=0.98 FAR=29.10% FRR= 0.61%
+thr=1.09 FAR=58.57% FRR= 0.00%
+thr=1.20 FAR=99.96% FRR= 0.00%
+
+Suggested threshold (target FAR 1.0%):
+  cosine distance threshold: 0.82
+  FAR: 0.88%
+  FRR: 2.43%
+
+Equivalent cosine similarity threshold: 0.180

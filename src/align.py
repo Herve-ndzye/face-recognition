@@ -56,7 +56,7 @@ def _safe_imshow(
 
 
 def main(
-    cam_index: int = 1,
+    cam_index: int = 2,
     out_size: Tuple[int, int] = (112, 112),
     mirror: bool = True,
 ) -> None:

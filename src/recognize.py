@@ -570,6 +570,9 @@ class FaceDBMatcher:
                 accepted=False,
             )
 
+        if hasattr(emb, "embedding"):
+            emb = emb.embedding
+
         embedding = (
             emb.reshape(1, -1)
             .astype(np.float32)
@@ -647,7 +650,7 @@ def main() -> None:
             dist_thresh=0.82,
         )
 
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture(2)
 
         if not cap.isOpened():
             raise RuntimeError(
@@ -749,7 +752,7 @@ def main() -> None:
                 # Embedding
                 # -----------------------------------------------------
 
-                embedding = embedder.embed(
+                embedding_result = embedder.embed(
                     aligned
                 )
 
@@ -758,7 +761,7 @@ def main() -> None:
                 # -----------------------------------------------------
 
                 match = matcher.match(
-                    embedding
+                    embedding_result.embedding
                 )
 
                 label = (

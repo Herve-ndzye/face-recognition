@@ -60,7 +60,7 @@ def main():
     # --------------------------------------------------
     # Camera
     # --------------------------------------------------
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(2)
 
     if not cap.isOpened():
         landmarker.close()

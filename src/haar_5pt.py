@@ -695,7 +695,7 @@ class Haar5ptDetector:
 def main() -> None:
     """Run the live Haar + MediaPipe Face Landmarker demo."""
 
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(2)
 
     if not cap.isOpened():
         raise RuntimeError(

@@ -319,7 +319,7 @@ def draw_status(
 
 
 def main(
-    camera_index: int = 1,
+    camera_index: int = 2,
 ) -> None:
     cfg = EnrollConfig()
 

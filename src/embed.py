@@ -376,7 +376,7 @@ def cosine_similarity(
 
 
 def main(
-    camera_index: int = 1,
+    camera_index: int = 2,
 ) -> None:
     cap = cv2.VideoCapture(camera_index)
 
